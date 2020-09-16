@@ -1,15 +1,19 @@
 import * as React from 'react'
-import { View, Text } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Button } from 'material-bread'
+
+import Heading from '~components/widgets/Heading'
+import Button from '~components/widgets/Button'
+
+import sharedStyles from '~config/sharedStyles'
 
 function Intro({ navigation }) {
   const goToQuiz = React.useCallback(() => navigation.navigate('Quiz'), [])
-
   return (
-    <SafeAreaView>
-      <Text>Intro screen!</Text>
-      <Button onPress={goToQuiz} text="Go To Quiz" />
+    <SafeAreaView style={[sharedStyles.screenPadding, sharedStyles.spaceBetweenVertically]}>
+      <Heading style={sharedStyles.textTitle} text="Welcome to the Trivia Challenge!" />
+      <Heading text="You will be presented with 10 True or False questions." />
+      <Heading text="Can you score 100%?" />
+      <Button onPress={goToQuiz} text="BEGIN" />
     </SafeAreaView>
   )
 }
