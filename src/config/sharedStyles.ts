@@ -4,7 +4,7 @@ import {
 
 export default StyleSheet.create({
   screenPadding: {
-    paddingHorizontal: 70,
+    paddingHorizontal: 50,
     paddingVertical: 25,
   },
   textCenter: {
@@ -21,4 +21,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
   },
+  centerVertically: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+  }
 })
